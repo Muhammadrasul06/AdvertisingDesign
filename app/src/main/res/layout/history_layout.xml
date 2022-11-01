@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:id="@+id/tayoqcha"
+        android:layout_width="20dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/balance_draweble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Orientation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/liner_draweble"
+        app:layout_constraintBottom_toBottomOf="@id/tayoqcha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tayoqcha"
+        app:layout_constraintTop_toTopOf="@id/tayoqcha">
+
+        <TextView
+            android:id="@+id/txtIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Вывод на :"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtid" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:hint="%id%"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/txtid"
+            app:layout_constraintStart_toEndOf="@id/txtid"
+            app:layout_constraintTop_toTopOf="@+id/txtid" />
+
+        <TextView
+            android:id="@+id/QiwiOrPayeer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="%Qiwi/Payeer%"
+            app:layout_constraintBottom_toBottomOf="@+id/txtIn"
+            app:layout_constraintStart_toEndOf="@id/txtid"
+            app:layout_constraintTop_toTopOf="@+id/txtIn"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Summa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="%Summa%"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSumma"
+            app:layout_constraintStart_toEndOf="@id/txtid"
+            app:layout_constraintTop_toTopOf="@+id/txtSumma" />
+
+        <TextView
+            android:id="@+id/Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:hint="%Number%"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNumberCard"
+            app:layout_constraintStart_toEndOf="@id/txtNumberCard"
+            app:layout_constraintTop_toTopOf="@+id/txtNumberCard"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txtid"
+            android:text="Номер вывода :"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtSumma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Cумма :"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtIn" />
+
+        <TextView
+            android:id="@+id/txtNumberCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Номер  :"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSumma" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
